@@ -8,6 +8,14 @@ This is the backend service for the Full-Stack Weather Dashboard application. It
 *   Securely manages a secret OpenWeatherMap API key by storing it in server-side properties, preventing it from being exposed in a frontend client.
 *   Uses Data Transfer Objects (DTOs) to map the complex external API response to a clean, simple data structure for the client.
 
+## Companion Frontend UI
+
+This backend API is designed to be used by its companion React frontend. The frontend provides the user interface for searching and displaying the weather data.
+
+**You can find the frontend project and its setup instructions here:**
+### [https://github.com/JunadeG/weather-dashboard-ui](https://github.com/JunadeG/weather-dashboard-ui)
+
+
 ## Technologies Used
 
 *   Java 17
