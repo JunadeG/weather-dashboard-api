@@ -1,4 +1,4 @@
-package com.weather.weather.dashboard.service; // Your package name
+package com.weather.weather.dashboard.service;
 
 import com.weather.weather.dashboard.dto.WeatherResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired; // Add this import
