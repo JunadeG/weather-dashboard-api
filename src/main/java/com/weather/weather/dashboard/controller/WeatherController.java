@@ -5,7 +5,7 @@ import com.weather.weather.dashboard.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://weather-dashboard-ui-sigma.vercel.app")
 @RestController
 @RequestMapping("/api")
 public class WeatherController {
