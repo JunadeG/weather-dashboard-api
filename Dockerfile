@@ -1,11 +1,10 @@
-# Step 1: Use a "Builder" image to compile the code
-FROM maven:3.8.5-openjdk-17 AS build
+# Step 1: Use a Maven image with Java 21 to compile the code
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
-# Step 2: Use a supported "Runtime" image to run the app
-# We are switching from 'openjdk' to 'eclipse-temurin'
-FROM eclipse-temurin:17-jdk-jammy
+# Step 2: Use a Java 21 Runtime image to run the app
+FROM eclipse-temurin:21-jdk-jammy
 COPY --from=build /target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app.jar"]
